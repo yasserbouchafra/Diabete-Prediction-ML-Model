@@ -1,0 +1,39 @@
+# Environnements virtuels
+venv/
+/venv/
+.venv/
+/.venv/
+env/
+/env/
+.env/
+/.env/
+
+# Fichiers de cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Fichiers de configuration d'éditeurs et d'IDE
+.idea/
+.vscode/
+*.swp
+
+# Fichiers de cache et de logs
+.cache/
+*.log
+*.log.*
+
+# Fichiers de système d'exploitation
+.DS_Store
+Thumbs.db
+
+# Fichiers de dépendances (si gérés localement)
+/dist/
+/build/
+*.egg-info/
+
+# Fichiers générés par le projet
+/generated_assets/
+*.pdf

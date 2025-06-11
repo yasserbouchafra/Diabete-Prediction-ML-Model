@@ -1,0 +1,23 @@
+# Framework Web
+streamlit==1.35.0
+
+# Analyse de données et calcul
+pandas==2.2.2
+numpy==1.26.4
+
+# Machine Learning
+scikit-learn==1.4.2
+xgboost==2.0.3
+
+# Explicabilité (XAI)
+shap==0.45.1
+
+# Visualisation de données
+matplotlib==3.8.4
+plotly==5.22.0
+
+# Génération de PDF
+fpdf2==2.7.8
+
+# Génération de diagrammes
+diagrams==0.23.4

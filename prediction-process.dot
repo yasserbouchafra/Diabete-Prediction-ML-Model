@@ -1,0 +1,24 @@
+digraph {
+	graph [bgcolor=transparent fontcolor="#2D3436" fontname="Sans-Serif" fontsize=20 label="" nodesep=0.60 pad=2.0 rankdir=LR ranksep=0.75 splines=ortho]
+	node [fillcolor="#F0F2F6" fixedsize=true fontcolor="#2D3436" fontname=Arial fontsize=14 height=1.4 imagescale=true labelloc=b shape=box style="rounded,filled" width=1.4]
+	edge [color="#7B8894" fontname=Arial fontsize=12]
+	"0d9e47fbc8d54209a4bddba2288dba69" [label="Données Patient
+(Glucose, BMI, Age...)"]
+	subgraph "cluster_Analyse par l'IA" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="Analyse par l'IA" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		b5ecda0a1a2c4b77bd07d44fa443561a [label="Modèle de ML
+Pré-entraîné"]
+		"9b4e4c87b39b4deb880bc286db2e7ca1" [label="Moteur de Prédiction"]
+		subgraph "cluster_Résultats" {
+			graph [bgcolor="#EBF3E7" fontname="Sans-Serif" fontsize=12 label="Résultats" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+			ade845d409ef4676b6de53e71a29debf [label="Score de Risque
+(0-100%)"]
+			"800efe9af4304aa486e640fb39b5c239" [label="Graphes d'Explication
+(Force & Waterfall)"]
+		}
+	}
+	"0d9e47fbc8d54209a4bddba2288dba69" -> "9b4e4c87b39b4deb880bc286db2e7ca1" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	b5ecda0a1a2c4b77bd07d44fa443561a -> "9b4e4c87b39b4deb880bc286db2e7ca1" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"9b4e4c87b39b4deb880bc286db2e7ca1" -> ade845d409ef4676b6de53e71a29debf [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"9b4e4c87b39b4deb880bc286db2e7ca1" -> "800efe9af4304aa486e640fb39b5c239" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+}

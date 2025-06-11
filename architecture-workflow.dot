@@ -1,0 +1,31 @@
+digraph {
+	graph [bgcolor=transparent fontcolor="#2D3436" fontname="Sans-Serif" fontsize=20 label="" nodesep=0.60 pad=2.0 rankdir=TB ranksep=0.75 splines=ortho]
+	node [fillcolor="#F0F2F6" fixedsize=true fontcolor="#2D3436" fontname=Arial fontsize=14 height=1.4 imagescale=true labelloc=b shape=box style="rounded,filled" width=1.4]
+	edge [color="#7B8894" fontname=Arial fontsize=12]
+	"218e9fffb63748c6b08dd0a0663d4723" [label="Interface Utilisateur
+(Streamlit)"]
+	subgraph "cluster_Backend & Traitement des Données" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="Backend & Traitement des Données" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"65ea22b0dce8450b8f4178b5cbecc979" [label="Source des Données
+(diabetes.csv)"]
+		subgraph "cluster_Moteur d'IA" {
+			graph [bgcolor="#EBF3E7" fontname="Sans-Serif" fontsize=12 label="Moteur d'IA" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+			"0a640e9c614b4405865feb50d36257e9" [label="1. Prétraitement"]
+			"0a3f90ce5b1c4997b5e4d6ddd44d4fca" [label="2. Entraînement & Sélection
+(RF, XGB, LR)"]
+			e0db73b674af46b3a07e46ee0d38ac58 [label="3. Explicabilité (SHAP)"]
+		}
+	}
+	subgraph "cluster_Sorties Générées" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="Sorties Générées" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"5950cff11e2b479ea9541553193862f2" [label="Dashboard & Graphes"]
+		"87479e24d7ea48b38d22200ef40633bc" [label="Rapport PDF"]
+	}
+	"218e9fffb63748c6b08dd0a0663d4723" -> "65ea22b0dce8450b8f4178b5cbecc979" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"65ea22b0dce8450b8f4178b5cbecc979" -> "0a640e9c614b4405865feb50d36257e9" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"0a640e9c614b4405865feb50d36257e9" -> "0a3f90ce5b1c4997b5e4d6ddd44d4fca" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"0a3f90ce5b1c4997b5e4d6ddd44d4fca" -> e0db73b674af46b3a07e46ee0d38ac58 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	e0db73b674af46b3a07e46ee0d38ac58 -> "5950cff11e2b479ea9541553193862f2" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	e0db73b674af46b3a07e46ee0d38ac58 -> "87479e24d7ea48b38d22200ef40633bc" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"218e9fffb63748c6b08dd0a0663d4723" -> "5950cff11e2b479ea9541553193862f2" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+}
