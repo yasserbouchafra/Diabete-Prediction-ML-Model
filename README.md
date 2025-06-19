@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/banner.png" alt="Bannière GlucoGuard">
-</p>
-
 # GlucoGuard ⚕️
 ![Badge](https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F%20by%20Yasser%20Bouchafra-blue?style=flat-square)
 
